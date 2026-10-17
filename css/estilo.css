@@ -74,6 +74,24 @@ dt{font-family:var(--display);font-size:23px;color:var(--accent)}
 .isotipo{width:60px;height:68px;--m:url(../marca/brand/isotipo.svg);margin-bottom:24px}
 .nav{position:fixed;right:48px;bottom:18px;z-index:3;font-family:var(--pixel);font-size:16px;color:var(--salvia)}
 body[data-lienzo="verde"] .nav,body[data-lienzo="profundo"] .nav{color:var(--amarillo)}
+.historia{list-style:none;margin:24px 0 0;padding:0}
+.historia li{padding:10px 0;border-top:1px solid color-mix(in srgb,currentColor 28%,transparent)}
+.historia strong{color:var(--accent)}
+.conclusion{margin-top:20px;color:var(--accent);font-size:clamp(18px,1.45vw,24px)}
+.notes{display:none}
+.ruido{display:grid;grid-template-columns:1fr 1fr;gap:18px 36px;margin-top:32px;max-width:1000px}
+.ruido span{font-size:clamp(22px,2.2vw,36px);color:var(--crema);transition:opacity .4s}
+.s.on .ruido span{animation:pregunta .6s both;animation-delay:calc(var(--n,0)*.35s)}
+.ruido span:nth-child(2){--n:1}.ruido span:nth-child(3){--n:2}.ruido span:nth-child(4){--n:3}.ruido span:nth-child(5){--n:4}.ruido span:nth-child(6){--n:5}.ruido span:nth-child(7){--n:6}.ruido span:nth-child(8){--n:7}
+.ruido-slide:has(.senal.visible) .ruido span{animation:none;opacity:.35}
+.senal{color:var(--amarillo);max-width:45ch}
+.tesis-slide .lead{font-size:clamp(28px,3vw,48px);max-width:40ch}
+#inicio .escena-layout,#gracias .escena-layout{flex:1;align-items:center}
+#inicio h1{font-size:clamp(42px,4.8vw,78px)}
+#inicio blockquote{font-size:clamp(22px,1.9vw,30px);margin-top:28px}
+#gracias .logo-h{width:min(360px,100%);margin-top:28px;height:76px}
+@keyframes pregunta{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.s.on .ruido span{animation:none;transition:none}}
 @media(max-width:900px){
   .s{padding:28px 44px 64px;height:100dvh}
   h1{font-size:52px}h2{font-size:34px}
@@ -98,6 +116,7 @@ body[data-lienzo="verde"] .nav,body[data-lienzo="profundo"] .nav{color:var(--ama
   table{table-layout:fixed}th,td{font-size:15px;padding:12px 8px 12px 0;overflow-wrap:anywhere}th{font-size:14px}
   caption{font-size:15px}.banda{gap:20px;flex-wrap:wrap}.banda img{width:52px;height:52px}
   .fuentes-lista li{font-size:20px}.fuentes-lista span{font-size:17px}
+  .ruido{grid-template-columns:1fr;gap:10px}
   .nav{right:32px}.logo-h{margin-top:36px}
 }
 @media print{

@@ -62,6 +62,31 @@ En el experimento de principios de 2025: 16 desarrolladores, 246 tareas de repos
 
 Costos de integración, revisión, capacitación, privacidad, permisos y comparación de tareas son criterios de análisis propuestos por los ponentes. No son estimaciones de impacto ni asesoría jurídica. Los ejemplos no prueban ahorro de tiempo, retorno financiero ni sustitución de puestos de trabajo.
 
+## Industria 5.0: definición institucional
+
+https://research-and-innovation.ec.europa.eu/research-area/industrial-research-and-innovation/industry-50_en
+
+Comisión Europea: industria centrada en las personas, sostenible y resiliente. Página primaria leída el 16 oct 2026. No equivale a declarar que los agentes hayan inaugurado una quinta revolución industrial. La escalera y la rampa 3D representan el argumento del ponente, no fechas, magnitudes ni un pronóstico medido.
+
+## Ciencia: Nobel de Química 2024
+
+https://www.nobelprize.org/prizes/chemistry/2024/press-release/
+
+Comunicado del 9 oct 2024, leído el 16 oct 2026. Mitad del premio a David Baker por diseño computacional de proteínas; la otra mitad a Demis Hassabis y John Jumper por predicción de estructuras. La charla no convierte predicción de estructuras en tratamiento aprobado ni en automatización completa de un laboratorio. No se reproducen imágenes con derechos de la Academia.
+
+## Infraestructura física
+
+https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai
+
+IEA, *Energy and AI* (2025): contexto sobre la demanda eléctrica de centros de datos. El acceso directo devolvió 403; se verificó el contexto eléctrico mediante extractos indexados de la fuente primaria. No se incorporan cifras por consulta, estimaciones hídricas ni proyecciones como hechos observados. Los comentarios sobre continuidad, proveedores, permisos y dependencia son criterios de análisis, no una predicción geopolítica cuantificada.
+
+## Recursos narrativos y ejemplos ampliados
+
+- Los nueve campos de la UTM se conservan como áreas de aplicación: matemáticas, ciencia, biología, conocimiento experto, oficina, freelance, derecho, finanzas y medicina. No se copiaron puntajes de evaluaciones que no se verificaron para esta versión.
+- La cotización de 12 sillas con 8 disponibles y 4 faltantes es un caso ficticio para discutir cuándo detenerse y pedir aprobación; no una demostración en vivo ni evidencia de ahorro.
+- La cascada de preguntas no reproduce titulares reales. Fuego, globo, red y tejido son metáforas, no comparaciones numéricas entre épocas.
+- Costo por tarea aceptada: incluir preparación, ejecución, intentos fallidos y revisión. Si no hay tareas aceptadas, el cociente no está definido.
+
 ## Identidad visual
 
-Paleta, fuentes, greca, isotipos y piezas del logo proceden del repositorio de la landing de Artesanos Digitales. Se conserva la animación del jarrón y wordmark, sin sonido. Foto de Hendrik entregada por él para la charla; no se declara licencia abierta de la fotografía ni de los elementos de marca. Los nombres «maestro del telar» y «maestro alfarero» son títulos creativos para la presentación, no credenciales ni cargos legales.
+Paleta, fuentes, greca, isotipos y piezas del logo proceden del repositorio de la landing de Artesanos Digitales. Se conservan la animación del jarrón/wordmark y las retículas originales de su escena voxel. Las escenas y transiciones adaptan el enfoque de la conferencia UTM. Sonido opcional, apagado al inicio; se respeta movimiento reducido y se ofrecen explicaciones estáticas sin WebGL. Three.js se distribuye localmente con su licencia MIT en `vendor/LICENSE-three.txt`. Foto de Hendrik entregada por él para la charla; no se declara licencia abierta de la fotografía ni de los elementos de marca. Los nombres «maestro del telar» y «maestro alfarero» son títulos creativos para la presentación, no credenciales ni cargos legales.

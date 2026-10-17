@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<title>Comprobación de navegación</title>
+<style>body{font:18px system-ui;margin:24px}iframe{width:1280px;height:720px;border:1px solid;max-width:100%}pre{white-space:pre-wrap}</style>
+<h1>Navegación y revelado</h1>
+<pre id="resultado" role="status">Ejecutando…</pre>
+<iframe src="../index.html#1" title="Presentación bajo prueba"></iframe>
+<script>
+const frame = document.querySelector('iframe');
+frame.addEventListener('load', async () => {
+  const result = document.querySelector('#resultado');
+  const win = frame.contentWindow;
+  const doc = frame.contentDocument;
+  const slides = [...doc.querySelectorAll('.deck > .s')];
+  const active = () => doc.querySelector('.s.on');
+  const visible = () => [...active().querySelectorAll('.fragment.visible')];
+  const tick = () => new Promise(resolve => win.requestAnimationFrame(() => win.requestAnimationFrame(resolve)));
+  const key = async value => { doc.body.dispatchEvent(new win.KeyboardEvent('keydown', {key:value, bubbles:true})); await tick(); };
+  const passed = [];
+  const check = (condition, message) => { if (!condition) throw Error(message); passed.push(message); };
+  try {
+    await doc.fonts.ready;
+    await key('Home');
+    const first = active();
+    await key('ArrowLeft');
+    check(active() === first, 'Retroceder al inicio conserva la primera lámina');
+    await key('ArrowRight');
+    check(active() === first && visible().length === 1, 'Avanzar revela un fragmento antes de cambiar de lámina');
+    await key('q');
+    check(active().id === 'preguntas', 'Q abre la conversación');
+    await key('q');
+    check(active() === first && visible().length === 1, 'Q vuelve al punto exacto, incluido el fragmento');
+    await key('ArrowLeft');
+    check(active() === first && visible().length === 0, 'Retroceder oculta el último fragmento');
+    const agentSlide = doc.querySelector('#agentes');
+    win.location.hash = String(slides.indexOf(agentSlide) + 1);
+    await new Promise(resolve => win.addEventListener('hashchange', resolve, {once:true}));
+    await tick();
+    const fragments = [...agentSlide.querySelectorAll('.fragment')];
+    for (let n = 1; n <= fragments.length; n++) {
+      await key('ArrowRight');
+      check(active() === agentSlide && visible().length === n, `Paso ${n} del agente se revela sin saltarse la lámina`);
+    }
+    await key('ArrowRight');
+    check(active() === slides[slides.indexOf(agentSlide) + 1], 'Después del último fragmento avanza a la siguiente lámina');
+    await key('ArrowLeft');
+    check(active() === agentSlide && visible().length === fragments.length, 'Volver desde la siguiente lámina conserva todos los pasos');
+    const office = doc.querySelector('#oficina');
+    win.location.hash = String(slides.indexOf(office) + 1);
+    await new Promise(resolve => win.addEventListener('hashchange', resolve, {once:true}));
+    await tick();
+    await key('ArrowRight');
+    check(office.querySelector('tbody tr').classList.contains('visible') && !office.querySelector('.takeaway').classList.contains('visible'), 'La tabla se revela antes de su conclusión, aunque esta tenga un fragmento explícito');
+    await key('End');
+    for (let n = 0; n <= active().querySelectorAll('.fragment').length; n++) await key('ArrowRight');
+    check(active() === slides.at(-1), 'Avanzar al final no sale de la última lámina');
+    check(doc.querySelectorAll('.s.on').length === 1, 'Solo hay una lámina activa después de la secuencia');
+    result.textContent = `PASS · ${passed.length} comprobaciones\n` + passed.join('\n');
+  } catch (error) { result.textContent = `FAIL · ${error.message}\n` + passed.join('\n'); }
+});
+</script>
+</html>

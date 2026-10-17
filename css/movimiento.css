@@ -1,0 +1,110 @@
+/* La interfaz acompaña la charla; las cifras siempre terminan en un plano real. */
+[hidden]{display:none!important}
+.notes{display:none!important}
+.deck-ready .s{padding-bottom:150px;touch-action:pan-y}
+.deck-ready .s:not(:has(.fuente)){padding-bottom:96px}
+.deck-ready .s .fuente{bottom:82px}
+.deck-ready .s.leaving{display:flex;flex-direction:column;position:absolute;inset:0;z-index:2;pointer-events:none}
+.deck-ready .s.on{z-index:1}
+.deck-ready .fragment{visibility:hidden;opacity:0}
+.deck-ready .fragment.visible{visibility:visible;opacity:1}
+.deck-ready .s:focus{outline:none}
+.deck-logo-estatico{width:100%;height:clamp(120px,28vh,320px);margin:auto 0;flex:1;min-height:120px}
+.deck-progress{position:fixed;left:0;right:0;bottom:0;height:4px;background:var(--salvia);z-index:8;pointer-events:none}
+.deck-progress span{display:block;height:100%;width:var(--progress,0%);background:var(--amarillo)}
+.deck-ui{position:fixed;bottom:12px;right:48px;display:flex;align-items:center;gap:8px;z-index:7;padding:5px;background:var(--verde-profundo);color:var(--crema);border:1px solid var(--salvia);border-radius:5px;font-family:var(--body)}
+.deck-ui button,.deck-ui summary,.deck-dialog button,.deck-blackout button,.speaker-controls button{font:inherit;font-size:15px;color:inherit;border:1px solid transparent;background:transparent;border-radius:3px;min-height:44px;padding:10px 14px;cursor:pointer;touch-action:manipulation}
+.deck-ui button:hover,.deck-ui summary:hover{background:var(--salvia)}
+.deck-ui button:disabled,.speaker-controls button:disabled{opacity:.4;cursor:default}
+.deck-ui button:disabled:hover{background:transparent}
+.deck-ui button:focus-visible,.deck-ui summary:focus-visible,.deck-dialog button:focus-visible,.deck-blackout button:focus-visible,.speaker-controls button:focus-visible{outline:3px solid var(--terracota);outline-offset:3px}
+.deck-ui svg{display:block;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.deck-position{font-size:14px;font-variant-numeric:tabular-nums;min-width:200px;text-align:center;white-space:nowrap}
+.deck-menu{position:relative;border-left:1px solid var(--salvia);padding-left:5px}
+.deck-menu summary{list-style:none;display:flex;align-items:center}
+.deck-menu summary::-webkit-details-marker{display:none}
+.deck-menu summary::after{content:'';width:6px;height:6px;margin-left:12px;border-top:1.5px solid currentColor;border-left:1.5px solid currentColor;transform:rotate(45deg)}
+.deck-menu[open] summary::after{transform:rotate(225deg)}
+.deck-menu-panel{position:absolute;right:-6px;bottom:60px;width:320px;max-width:calc(100vw - 32px);max-height:70dvh;overflow:auto;display:grid;gap:4px;padding:12px;border:1px solid var(--salvia);background:var(--verde-profundo);box-shadow:0 12px 32px #16211a40}
+.deck-menu-panel button{text-align:left;border-bottom:1px solid var(--salvia);border-radius:0}
+.deck-menu-panel button[aria-pressed="true"]{color:var(--amarillo)}
+.deck-sr{position:fixed;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.deck-dialog{position:fixed;inset:0;width:min(1300px,calc(100vw - 48px));max-width:none;max-height:calc(100dvh - 48px);margin:auto;padding:32px;border:1px solid var(--salvia);border-radius:4px;background:var(--crema);color:var(--verde);font-family:var(--body);overscroll-behavior:contain;scrollbar-color:var(--salvia) var(--crema)}
+.deck-dialog::backdrop{background:#16211aeb}
+.deck-dialog header{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:28px}
+.deck-dialog header h2{font-size:clamp(24px,2.6vw,38px)}
+.deck-dialog header button{flex-shrink:0;border-color:var(--salvia)}
+.deck-dialog button:hover{background:var(--amarillo);color:var(--verde)}
+.deck-overview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:16px}
+.deck-dialog .deck-choice{display:flex;flex-direction:column;align-items:flex-start;gap:14px;text-align:left;padding:22px;min-height:210px;border:1px solid var(--salvia);border-radius:0;background:var(--crema);color:var(--verde)}
+.deck-dialog .deck-choice.verde,.deck-dialog .deck-choice.profundo{background:var(--verde);color:var(--crema)}
+.deck-dialog .deck-choice.amarillo{background:var(--amarillo)}
+.deck-dialog .deck-choice[aria-current]{outline:3px solid var(--terracota);outline-offset:2px}
+.deck-choice-number{font-family:var(--pixel);font-size:17px;color:inherit}
+.deck-choice strong{font-family:var(--display);font-size:20px;line-height:1.3;letter-spacing:-.02em}
+.deck-choice>span:last-child{font-size:15px;line-height:1.5;max-width:46ch}
+.deck-dialog .deck-choice:hover{background:var(--amarillo);color:var(--verde)}
+.deck-help{max-width:850px}
+.deck-help dl{display:grid;grid-template-columns:minmax(160px,1fr) 2fr;gap:16px 24px;margin:0 0 28px}
+.deck-help dt{font-family:var(--body);font-size:17px;font-weight:500;color:var(--verde)}
+.deck-help dd{font-size:17px;line-height:1.5}
+.deck-help p{font-size:16px;line-height:1.6;margin-top:16px}
+.deck-blackout{position:fixed;inset:0;z-index:20;background:#000;display:grid;place-items:end center;padding:24px;color:var(--crema)}
+.deck-blackout button{opacity:.25}
+.deck-blackout button:hover,.deck-blackout button:focus-visible{opacity:1}
+.deck-paused .deck-ui,.deck-paused .deck-progress,.deck-paused .greca{visibility:hidden}
+.deck-suspended .deck *,.deck-animation-pending .s.on .ruido span{animation-play-state:paused!important}
+.deck-reduced-motion .deck *{animation:none!important;transition:none!important}
+.speaker-body{overflow:auto;min-height:100%;height:auto;background:var(--crema);color:var(--verde);padding:32px clamp(20px,4vw,52px) 100px}
+.speaker-header{display:flex;justify-content:space-between;align-items:center;gap:24px;border-bottom:1px solid var(--salvia);padding-bottom:20px}
+.speaker-header h1{font-size:28px}
+.speaker-header output{font-family:var(--pixel);font-size:32px;font-variant-numeric:tabular-nums}
+#speaker-status{font-size:15px;color:var(--salvia);margin:18px 0 28px}
+.speaker-slides{display:grid;grid-template-columns:1.2fr 1fr;gap:32px}
+.speaker-slides section{border-top:3px solid var(--terracota);padding-top:20px}
+.speaker-slides section+section{border-color:var(--salvia)}
+.speaker-body h2{font-size:18px;letter-spacing:0;color:var(--salvia)}
+.speaker-body h3{font-size:27px;margin:18px 0}
+.speaker-body p,.speaker-body li{font-size:18px;line-height:1.6}
+#speaker-step{font-size:15px;margin-top:20px;color:var(--salvia)}
+.speaker-notes{margin-top:40px;padding-top:24px;border-top:1px solid var(--salvia)}
+#speaker-notes{font-size:20px;line-height:1.6;margin-top:16px;max-width:72ch}
+#speaker-notes p+p{margin-top:12px}
+.speaker-controls{position:fixed;bottom:0;left:0;right:0;display:flex;justify-content:center;gap:12px;padding:14px;background:var(--verde);color:var(--crema);flex-wrap:wrap}
+.speaker-controls button{border-color:var(--salvia)}
+.speaker-controls button:hover{background:var(--salvia)}
+@media(max-width:900px){
+  .deck-ready .s{padding-bottom:100px}
+  .deck-ready .s .fuente{position:static}
+  .deck-ui{right:28px}
+  .deck-dialog{padding:24px;width:calc(100vw - 32px);max-height:calc(100dvh - 32px)}
+}
+@media(max-width:600px){
+  .deck-ui{left:12px;right:12px;justify-content:space-between;gap:2px}
+  .deck-ui button,.deck-ui summary{padding:10px}
+  .deck-position{min-width:0;font-size:12px}
+  .deck-menu{padding-left:2px}
+  .deck-menu summary{font-size:13px}
+  .deck-menu summary::after{margin-left:8px}
+  .deck-dialog{padding:20px}
+  .deck-dialog header{align-items:flex-start;gap:12px}
+  .deck-dialog header button{font-size:13px;padding:8px}
+  .deck-help dl{grid-template-columns:1fr;gap:8px}
+  .deck-help dd{margin-bottom:16px}
+  .speaker-body{padding-bottom:150px}
+  .speaker-slides{grid-template-columns:1fr}
+  .speaker-header h1{font-size:22px}
+}
+@media(prefers-reduced-motion:reduce){
+  .deck-ready .deck *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+@media print{
+  .deck-ui,.deck-progress,.deck-dialog,.deck-blackout,.deck-sr,.greca{display:none!important}
+  .deck-ready .s,.deck-ready .s.on,.deck-ready .s.leaving{display:flex!important;position:relative!important;inset:auto!important;opacity:1!important;transform:none!important;height:auto;min-height:100vh;overflow:visible;padding-bottom:48px;break-after:page}
+  .deck-ready .fragment{visibility:visible!important;opacity:1!important;transform:none!important}
+  .deck-ready .deck *{animation:none!important;transition:none!important;transform:none!important}
+  .deck-ready .s .fuente{position:static;margin-top:24px}
+  .notes{display:none!important}
+  .deck-logo-estatico{display:block!important}
+  #lienzo{display:none!important}
+}

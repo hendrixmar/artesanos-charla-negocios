@@ -1,0 +1,94 @@
+/* La ilustración tiene su propio espacio: nunca se dibuja detrás del texto. */
+.escena-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 64px);
+  align-items: center;
+  flex: 1;
+  min-height: 0;
+  margin-top: 24px;
+}
+.escena-layout > * { min-width: 0; }
+.escena-panel {
+  position: relative;
+  isolation: isolate;
+  align-self: stretch;
+  min-height: 320px;
+  width: 100%;
+  overflow: hidden;
+  background: var(--verde-profundo, #16211a);
+  color: var(--crema, #f9f5d2);
+  border: 1px solid var(--salvia, #4b6654);
+}
+.escena-lienzo { display: none; }
+.escena-render {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.escena-render[hidden] { display: none; }
+.escena-respaldo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 280px;
+  padding: 32px 28px 72px;
+  color: var(--crema, #f9f5d2);
+  font-size: clamp(17px, 1.35vw, 22px);
+  line-height: 1.5;
+}
+.escena-panel[data-scene-ready] .escena-respaldo {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  min-height: 0;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.escena-estado {
+  position: absolute;
+  inset: auto 18px 16px;
+  margin: 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--salvia, #4b6654);
+  color: var(--crema, #f9f5d2);
+  font-size: clamp(13px, 1vw, 16px);
+  line-height: 1.4;
+  text-align: center;
+}
+[data-escena="telar"] .escena-panel:not([data-scene-ready]) .escena-respaldo {
+  padding-top: 190px;
+  background: url(../marca/intro/jarron.png) center 20px / auto 150px no-repeat;
+}
+.escena-layout .flow { flex-direction: column; gap: 12px; margin-top: 20px; }
+.escena-layout .flow li { padding-top: 10px; }
+.escena-layout .lista { margin-top: 18px; }
+.escena-layout .lista li { padding-block: 8px; }
+@media (min-width: 901px) and (max-height: 760px) {
+  .escena-panel { min-height: 270px; }
+  .escena-layout { gap: 28px; margin-top: 16px; }
+  .escena-layout p, .escena-layout li { font-size: clamp(18px, 1.35vw, 23px); }
+  .escena-layout .escena-estado { font-size: 13px; }
+}
+@media (max-width: 900px) {
+  .escena-layout { grid-template-columns: 1fr; flex: none; gap: 24px; }
+  .escena-panel { min-height: 340px; height: min(50vw, 420px); }
+}
+@media (max-width: 600px) {
+  .escena-panel { min-height: 300px; }
+}
+@media print {
+  .escena-layout { display: block; }
+  .escena-panel { min-height: 0; margin-top: 20px; background: none; color: var(--verde); border-color: var(--salvia); }
+  .escena-render, .escena-estado { display: none; }
+  .escena-panel[data-scene-ready] .escena-respaldo, .escena-respaldo {
+    position: static; display: block; width: auto; height: auto; min-height: 0;
+    padding: 20px; margin: 0; clip-path: none; white-space: normal; overflow: visible; color: var(--verde);
+  }
+}

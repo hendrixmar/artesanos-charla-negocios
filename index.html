@@ -6,15 +6,19 @@
 <title>IA, trabajo y negocios · Una mirada desde México</title>
 <link rel="icon" href="marca/brand/isotipo.svg">
 <link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="css/movimiento.css">
+<link rel="stylesheet" href="css/escenas.css">
 </head>
 <body>
 <div class="greca" aria-hidden="true"></div>
 <main class="deck">
-<section class="s crema" data-lienzo="crema">
-  <h1>IA, trabajo<br>y negocios.</h1>
-  <p class="sub">Una mirada desde México al cambio tecnológico en el mundo.</p>
-  <blockquote>«Hay décadas en las que no pasa nada, y semanas en las que pasan décadas».</blockquote>
+<section class="s crema" data-lienzo="crema" data-escena="titulo" id="inicio">
+  <div class="escena-layout">
+    <div><h1>IA, trabajo<br>y negocios.</h1><p class="sub">Una mirada desde México al cambio tecnológico en el mundo.</p><blockquote class="fragment" data-estado="1">«Hay décadas en las que no pasa nada, y semanas en las que pasan décadas».</blockquote></div>
+    <div class="escena-panel" data-scene-host><canvas class="escena-lienzo" aria-label="Partículas que forman una red de conexiones"></canvas><p class="escena-respaldo">De puntos aislados a una red: una metáfora visual del conocimiento conectado.</p></div>
+  </div>
   <p class="fuente">Charla divulgativa · Artesanos Digitales · Fuentes consultadas: 16 de octubre de 2026. Cada dato conserva su año.</p>
+  <aside class="notes">Abrir con la pregunta: ¿qué ha cambiado en su trabajo este año? Primer clic: completar la frase mientras se forma la red. La imagen no es una medición de inteligencia. Presentar el propósito: entender la tecnología, la evidencia y sus límites, sin vender una solución.</aside>
 </section>
 <section class="s verde" data-lienzo="verde">
   <h2>Dos oficios.<br>Una conversación.</h2>
@@ -30,28 +34,73 @@
   <canvas class="lienzo" id="lienzo" role="img" aria-label="Logo animado de Artesanos Digitales"></canvas>
   <p class="sub">Preguntar, experimentar y compartir lo que sí podemos comprobar.</p>
 </section>
+<section class="s verde" data-lienzo="verde" data-escena="telar" id="pieza">
+  <h2>De piezas sueltas<br>a un sistema que tiene sentido.</h2>
+  <div class="escena-layout">
+    <div><p class="lead">Un modelo no trabaja solo.</p><p class="fragment" data-estado="1">Los datos, las herramientas y las personas tienen que conectarse.</p><p class="fragment" data-estado="2">La forma puede cambiar. Los criterios de calidad no desaparecen.</p></div>
+    <div class="escena-panel" data-scene-host><canvas class="escena-lienzo" aria-label="Jarrón de Artesanos construido con piezas tridimensionales que se entretejen"></canvas><p class="escena-respaldo">Jarrón → piezas → tejido. Metáfora del trabajo conjunto, no un diagrama técnico de un modelo.</p></div>
+  </div>
+  <aside class="notes">Usar el jarrón de la landing como puente, no como anuncio. Avanzar dos veces para desarmar y entretejer. Aclarar que instalar una aplicación no equivale a integrar un proceso. La forma representa colaboración y organización, no redes neuronales reales.</aside>
+</section>
 <section class="s amarillo" data-lienzo="crema">
   <h2>¿Una quinta<br>revolución industrial?</h2>
   <p class="lead">Antes ampliamos la fuerza física.<br>Ahora automatizamos partes del trabajo intelectual.</p>
   <p class="sub">Es la hipótesis de la conferencia: herramientas que participan en lo que construimos y descubrimos. No significa que desaparezcan la invención ni la responsabilidad humanas.</p>
   <p class="fuente">Marco interpretativo del ponente; no es una clasificación histórica universal ni la definición institucional de Industria 5.0.</p>
 </section>
+<section class="s profundo" data-lienzo="profundo" data-escena="revoluciones" id="revoluciones">
+  <h2>Del músculo<br>al trabajo cognitivo.</h2>
+  <div class="escena-layout">
+    <div><ol class="historia">
+      <li class="fragment" data-estado="1"><strong>Vapor.</strong> Mecanizar trabajo físico.</li>
+      <li class="fragment" data-estado="2"><strong>Electricidad.</strong> Producir a otra escala.</li>
+      <li class="fragment" data-estado="3"><strong>Computación.</strong> Automatizar instrucciones.</li>
+      <li class="fragment" data-estado="4"><strong>Conexión digital.</strong> Coordinar sistemas.</li>
+      <li class="fragment" data-estado="5"><strong>Agentes.</strong> Ejecutar objetivos acotados.</li>
+    </ol><p class="fragment conclusion" data-estado="6">¿Escalones o cambio continuo? La rampa es una hipótesis, no un pronóstico.</p></div>
+    <div class="escena-panel" data-scene-host><canvas class="escena-lienzo" aria-label="Escalera de transformaciones industriales y rampa hipotética"></canvas><p class="escena-respaldo">Vapor → electricidad → computación → conexión digital → agentes. El quinto escalón es el marco propuesto en esta charla.</p></div>
+  </div>
+  <p class="fuente">Esquema narrativo adaptado de la conferencia UTM, no una escala numérica de progreso. Las transformaciones se superponen.</p>
+  <aside class="notes">Un clic por escalón; dejar que la cámara llegue antes del siguiente. No afirmar que toda la industria ya usa agentes. La Revolución Verde es una transformación agrícola distinta, no el quinto escalón de esta clasificación. La cámara final abre la discusión, no predice una aceleración infinita.</aside>
+</section>
+<section class="s crema" data-lienzo="crema" id="industria">
+  <h2>“Industria 5.0”<br>también tiene otro significado.</h2>
+  <p class="lead">Para la Comisión Europea, el centro está en las personas, la sostenibilidad y la resiliencia.</p>
+  <div class="fila"><div class="fragment"><h3>Personas</h3><p>Bienestar, habilidades y capacidad de decidir.</p></div><div class="fragment"><h3>Sostenibilidad</h3><p>Recursos y límites ambientales, no solo eficiencia.</p></div><div class="fragment"><h3>Resiliencia</h3><p>Poder operar y adaptarse cuando hay interrupciones.</p></div></div>
+  <p class="takeaway fragment">Nuestra hipótesis sobre agentes no sustituye esa definición institucional.</p>
+  <p class="fuente"><a href="https://research-and-innovation.ec.europa.eu/research-area/industrial-research-and-innovation/industry-50_en" target="_blank" rel="noopener noreferrer">Comisión Europea · Industry 5.0</a>. Consulta: 16 oct 2026.</p>
+  <aside class="notes">Esta aclaración evita presentar una opinión del ponente como consenso histórico. Preguntar: ¿qué sentido tendría aumentar producción si empeoran las condiciones de trabajo o la fragilidad del negocio?</aside>
+</section>
 <section class="s crema" data-lienzo="crema">
   <h2>Tres preguntas.<br>No una promesa.</h2>
   <ol class="steps"><li><strong>Capacidad</strong><span>¿Qué tareas puede resolver la IA y con qué errores?</span></li><li><strong>Adopción</strong><span>¿Quién la usa y quién todavía no puede aprovecharla?</span></li><li><strong>Resultados</strong><span>¿Mejora el trabajo cuando contamos revisión, costo y calidad?</span></li></ol>
   <p class="takeaway">Primero la evidencia. Después, la interpretación.</p>
+</section>
+<section class="s profundo ruido-slide" data-lienzo="profundo" id="ruido">
+  <h2>¿Cómo separo<br>la señal del ruido?</h2>
+  <div class="ruido" aria-label="Preguntas habituales, no titulares ni citas"><span>¿Todo cambió?</span><span>¿Es una burbuja?</span><span>¿Qué modelo uso?</span><span>¿Me va a reemplazar?</span><span>¿Quién verifica?</span><span>¿Cuánto cuesta?</span><span>¿Y mis datos?</span><span>¿Quién responde si falla?</span></div>
+  <p class="lead fragment senal">Con una tarea concreta, una medida clara y una fuente que podamos revisar.</p>
+  <aside class="notes">Dejar que aparezcan las preguntas. No leerlas todas. Un clic revela la idea principal y baja el protagonismo del ruido. Es una dramatización editorial, no titulares reales.</aside>
 </section>
 <section class="s crema" data-lienzo="crema">
   <h2>No toda automatización<br>es inteligencia artificial.</h2>
   <div class="fila"><div><img class="pieza" src="marca/elementos/boton.svg" alt=""><h3>Reglas</h3><p>“Si vence la factura, manda un recordatorio”. Sigue una instrucción fija.</p></div><div><img class="pieza" src="marca/brand/red-neuronal.svg" alt=""><h3>IA generativa</h3><p>Redacta, resume o interpreta contenido. Puede producir una respuesta convincente y equivocada.</p></div><div><img class="pieza" src="marca/elementos/automatizacion.svg" alt=""><h3>Agente</h3><p>Combina un modelo con herramientas para actuar y revisar resultados dentro de ciertos permisos.</p></div></div>
   <p class="takeaway">Un recordatorio no necesita un agente. La herramienta depende de la tarea.</p>
 </section>
-<section class="s verde" data-lienzo="verde">
+<section class="s verde" data-lienzo="verde" data-escena="agentes" id="agentes">
   <h2>De responder<br>a ejecutar pasos.</h2>
-  <ol class="flow"><li>Recibe un objetivo</li><li>Consulta datos</li><li>Usa una herramienta</li><li>Revisa el resultado</li></ol>
-  <p class="lead">Ejemplo: preparar una cotización con el catálogo vigente.</p>
-  <p class="sub">La persona fija precios y permisos, revisa el borrador y autoriza el envío. El agente no debe inventar existencias ni conceder descuentos por su cuenta.</p>
-  <p class="fuente">Adaptación del ciclo agéntico de la conferencia UTM. Ejemplo didáctico, no caso de cliente ni resultado medido.</p>
+  <div class="escena-layout">
+    <div><ol class="historia"><li class="fragment" data-estado="1"><strong>Percibir:</strong> consultar datos y resultados.</li><li class="fragment" data-estado="2"><strong>Razonar:</strong> proponer el siguiente paso.</li><li class="fragment" data-estado="3"><strong>Actuar:</strong> usar una herramienta permitida.</li><li class="fragment" data-estado="4"><strong>Verificar:</strong> decidir si sirve o debe detenerse.</li></ol><p class="conclusion">La persona define el objetivo y autoriza las acciones sensibles.</p></div>
+    <div class="escena-panel" data-scene-host><canvas class="escena-lienzo" aria-label="Ciclo de un agente con herramientas y aprobación humana"></canvas><p class="escena-respaldo">Objetivo → observar → razonar → actuar con herramientas → verificar. Una persona conserva el control de permisos y resultados.</p></div>
+  </div>
+  <p class="fuente">Ciclo agéntico de la conferencia UTM. Esquema explicativo, no garantía de corrección ni autonomía.</p>
+  <aside class="notes">Cada clic ilumina un paso. Ejemplo oral: preparar una cotización con catálogo vigente. Si falta un precio, detenerse y preguntar; no inventarlo. Enviar, pagar o borrar requieren autorización independiente.</aside>
+</section>
+<section class="s crema" data-lienzo="crema" id="caso">
+  <h2>Una cotización,<br>paso por paso.</h2>
+  <p class="contexto">Recorrido didáctico con datos ficticios; no es una ejecución en vivo ni un caso de cliente.</p>
+  <ol class="steps"><li class="fragment"><strong>Encargo</strong><span>“Cotiza 12 sillas para el viernes”.</span></li><li class="fragment"><strong>Consulta</strong><span>El catálogo confirma 8 disponibles, no 12.</span></li><li class="fragment"><strong>Decisión</strong><span>La respuesta correcta es preguntar por las 4 faltantes, no prometer la entrega.</span></li><li class="fragment"><strong>Aprobación</strong><span>La persona confirma precio, plazo y envío del mensaje.</span></li></ol>
+  <aside class="notes">Pedir al público que identifique dónde una respuesta fluida puede salir cara. No hay precio inventado: el punto es la verificación de existencias. Lo más valioso puede ser detectar que no se debe completar una tarea automáticamente.</aside>
 </section>
 <section class="s crema" data-lienzo="crema">
   <h2>La capacidad crece.<br>La autonomía no está garantizada.</h2>
@@ -66,10 +115,53 @@
   <p class="takeaway">Capacidad técnica ≠ adopción ≠ productividad ≠ utilidad.</p>
   <p class="fuente"><a href="https://metr.org/time-horizons/" target="_blank" rel="noopener noreferrer">METR: metodología y preguntas frecuentes</a>. Distinción retomada de la conferencia UTM.</p>
 </section>
+<section class="s verde" data-lienzo="verde" id="dominios">
+  <h2>No es solo programación.<br>Tampoco son oficios resueltos.</h2>
+  <p class="lead">Leer, comparar, redactar, calcular y proponer aparecen en muchos trabajos.</p>
+  <div class="fila"><div class="fragment"><h3>Oficina y comercio</h3><p>Documentos, inventarios, cotizaciones y reportes.</p></div><div class="fragment"><h3>Áreas especializadas</h3><p>Derecho, finanzas, medicina y conocimiento experto.</p></div><div class="fragment"><h3>Investigación</h3><p>Matemáticas, ciencia y biología computacional.</p></div></div>
+  <p class="takeaway fragment">Se repite el patrón de la UTM: una tarea evaluada no equivale a toda una profesión.</p>
+  <aside class="notes">Estos son campos de aplicación, no afirmaciones de autonomía ni una clasificación por puntaje. La versión UTM separa nueve dominios porque sus evaluaciones miden cosas diferentes. Aquí los traducimos al negocio: qué salida produce una herramienta y quién puede validarla.</aside>
+</section>
+<section class="s crema" data-lienzo="crema" id="oficina">
+  <h2>Oficina y proyectos:<br>terminar importa más que generar.</h2>
+  <table><caption>Aplicaciones posibles, no resultados medidos</caption><thead><tr><th>Campo</th><th>Salida útil</th><th>Lo que no demuestra</th></tr></thead><tbody><tr><td>Oficina</td><td>Un reporte con datos rastreables</td><td>Que todos sus números sean correctos</td></tr><tr><td>Trabajo freelance</td><td>Un entregable que cumple requisitos</td><td>Que el cliente lo acepte sin cambios</td></tr><tr><td>Conocimiento experto</td><td>Una comparación de alternativas</td><td>Que conozca todo el contexto del negocio</td></tr></tbody></table>
+  <p class="takeaway fragment">El criterio es el resultado aceptado, no la cantidad de texto o código.</p>
+  <aside class="notes">Retoma oficina, freelance y conocimiento experto de los dominios UTM sin mezclar sus porcentajes. Preguntar qué significa terminado para el público: enviado, cobrado, sin errores, comprendido. No afirmar que una evaluación sustituya la revisión de un proyecto completo.</aside>
+</section>
+<section class="s crema" data-lienzo="crema" id="especialistas">
+  <h2>En áreas sensibles,<br>la revisión cambia de nivel.</h2>
+  <dl class="riesgos"><div class="fragment"><dt>Derecho</dt><dd>Una cita debe existir y aplicar a la jurisdicción y fecha del caso.</dd></div><div class="fragment"><dt>Finanzas</dt><dd>Un escenario necesita supuestos explícitos y cálculos comprobables; no garantiza un rendimiento.</dd></div><div class="fragment"><dt>Medicina</dt><dd>Un resumen puede ayudar; no sustituye una evaluación clínica ni autoriza compartir expedientes.</dd></div></dl>
+  <p class="takeaway fragment">Cuanto mayor es la consecuencia del error, más fuerte debe ser la verificación.</p>
+  <aside class="notes">Conservar la amplitud de la UTM sin sugerir que todos deben automatizar estas áreas. Las barreras no son solo capacidad del modelo: también permisos, responsabilidad profesional, privacidad y consecuencias.</aside>
+</section>
+<section class="s crema" data-lienzo="crema" id="ciencia">
+  <h2>La ciencia ya ofrece<br>un ejemplo concreto.</h2>
+  <p class="contexto">Nobel de Química 2024 · diseño y predicción de proteínas</p>
+  <div class="contraste"><div class="fragment"><h3>David Baker</h3><p>Diseño computacional de proteínas: construir nuevas estructuras.</p></div><div class="fragment"><h3>Hassabis y Jumper</h3><p>Predicción de estructuras mediante IA: AlphaFold2.</p></div></div>
+  <p class="takeaway fragment">Una predicción no es un tratamiento aprobado. El laboratorio y la validación siguen importando.</p>
+  <p class="fuente"><a href="https://www.nobelprize.org/prizes/chemistry/2024/press-release/" target="_blank" rel="noopener noreferrer">Real Academia Sueca de Ciencias · Nobel de Química, 9 oct 2024</a>. Consulta: 16 oct 2026.</p>
+  <aside class="notes">Es un caso documentado, no una promesa. Conecta ciencia y biología computacional de la UTM con investigación, materiales y productos. En matemáticas, una prueba debe verificarse; en ciencias experimentales, una hipótesis debe contrastarse. No confundir generar una idea con demostrarla.</aside>
+</section>
+<section class="s profundo" data-lienzo="profundo" data-escena="fuego" id="hipotesis">
+  <h2>Energía, conexión<br>y nuevas herramientas.</h2>
+  <div class="escena-layout">
+    <div><p class="lead">El fuego transforma materiales.</p><p class="fragment" data-estado="1">Internet conecta información y personas.</p><p class="fragment" data-estado="2">Los agentes pueden participar en la construcción de nuevas herramientas.</p><p class="conclusion">La comparación abre una pregunta sobre la velocidad. No mide cuál es “más importante”.</p></div>
+    <div class="escena-panel" data-scene-host><canvas class="escena-lienzo" aria-label="Partículas de fuego que se transforman en un globo conectado y órbitas de agentes"></canvas><p class="escena-respaldo">Fuego → globo conectado → agentes. Metáfora de la conferencia, no escala de impacto histórico.</p></div>
+  </div>
+  <p class="fuente">Hipótesis del ponente adaptada de la UTM: acelerar parte del trabajo cognitivo no prueba una transformación histórica superior.</p>
+  <aside class="notes">La hipótesis aparece después de explicar capacidad y límites, no como una verdad demostrada en la apertura. Un clic transforma fuego en red; otro, en agentes. Admitir que la IA depende de electricidad, chips e internet: no existe separada de las tecnologías anteriores.</aside>
+</section>
+<section class="s amarillo tesis-slide" data-lienzo="crema">
+  <h2>Lo que la evidencia<br>sí permite decir.</h2>
+  <p class="lead fragment">Podemos delegar partes de tareas cada vez más complejas.</p>
+  <p class="lead fragment">Todavía tenemos que comprobar el resultado y decidir dónde vale la pena hacerlo.</p>
+  <aside class="notes">Pausa de cierre de bloque, como las láminas de tesis de UTM. No presentar una conclusión económica a partir de un benchmark. Puente: ahora cambiamos de capacidad técnica a adopción real.</aside>
+</section>
 <section class="s crema" data-lienzo="crema">
   <h2>El mundo empresarial<br>no son solo las grandes compañías.</h2>
   <div class="split"><img class="ilustracion" src="marca/elementos/tiendas.svg" alt=""><div><p class="lead">Las pymes representan alrededor del <strong>90% de los negocios</strong> y más de la mitad del empleo mundial.</p><p class="sub">Por eso importa quién puede acceder a financiamiento, habilidades y tecnología.</p></div></div>
   <p class="fuente"><a href="https://www.worldbank.org/ext/en/topic/competitiveness/small-and-medium-enterprises-smes-finance" target="_blank" rel="noopener noreferrer">Banco Mundial · SME Finance</a>. Estimación general, no un censo mundial de 2026. Las definiciones de pyme varían entre países.</p>
+  <aside class="notes">Dato de contexto mundial aproximado: la definición de pyme no es uniforme. No multiplicar esta cifra por los resultados de un estudio de IA. Introducir las diferencias de tamaño y capacidad de inversión antes de mostrar adopción.</aside>
 </section>
 <section class="s crema" data-lienzo="crema">
   <h2>El uso empresarial de IA<br>sí está creciendo.</h2>
@@ -77,6 +169,7 @@
   <div class="barras"><div><div class="barra-etq"><span>2023</span><b>8.7%</b></div><div class="pista"><i style="--w:8.7%"></i></div></div><div><div class="barra-etq"><span>2024</span><b>14.2%</b></div><div class="pista"><i style="--w:14.2%"></i></div></div><div><div class="barra-etq"><span>2025</span><b>20.2%</b></div><div class="pista"><i style="--w:20.2%"></i></div></div></div>
   <p class="takeaway">La adopción se duplicó con creces. Eso no demuestra que se duplicaran las ganancias.</p>
   <p class="fuente"><a href="https://www.oecd.org/en/about/news/announcements/2026/01/ai-use-by-individuals-surges-across-the-oecd-as-adoption-by-firms-continues-to-expand.html" target="_blank" rel="noopener noreferrer">OCDE · comunicado de 28 ene 2026</a>. No es una tasa mundial ni de todas las microempresas. Escala de barras: 0–100%.</p>
+  <aside class="notes">Tres clics, un año por vez. Mantener la escala de 0 a 100; no ampliar el eje para exagerar el cambio. Se mide uso reportado de IA, no ahorro, intensidad de uso o retorno. El año del comunicado es distinto al año de los datos.</aside>
 </section>
 <section class="s verde" data-lienzo="verde">
   <h2>Pero no todas<br>avanzan al mismo ritmo.</h2>
@@ -84,12 +177,14 @@
   <div class="barras"><div><div class="barra-etq"><span>Empresas pequeñas</span><b>17.4%</b></div><div class="pista"><i style="--w:17.4%"></i></div></div><div><div class="barra-etq"><span>Empresas grandes</span><b>52.0%</b></div><div class="pista"><i style="--w:52%"></i></div></div></div>
   <p class="takeaway">Que una herramienta esté disponible no significa que todos puedan integrarla.</p>
   <p class="fuente"><a href="https://www.oecd.org/en/about/news/announcements/2026/01/ai-use-by-individuals-surges-across-the-oecd-as-adoption-by-firms-continues-to-expand.html" target="_blank" rel="noopener noreferrer">OCDE · 28 ene 2026</a>. Cobertura empresarial de la fuente, no extrapolable a todo México. Escala: 0–100%.</p>
+  <aside class="notes">Dejar que aparezcan primero las pequeñas y después las grandes. La diferencia puede motivar preguntas sobre recursos, integración y habilidades, pero esta lámina por sí sola no identifica una causa. No aplicar 17.4% a todas las microempresas de México.</aside>
 </section>
 <section class="s amarillo" data-lienzo="crema">
   <h2>En México, hablar de negocios<br>es hablar de microempresas.</h2>
   <p class="contexto">INEGI · Censos Económicos 2024 · datos de 2023</p>
   <div class="split"><img class="ilustracion" src="marca/brand/canasta.svg" alt=""><div><p class="lead"><strong>95.4%</strong> de las unidades económicas son microempresas.</p><p class="sub">Ocupan al <strong>41.4%</strong> del personal del universo estudiado. Micro: de 0 a 10 personas.</p></div></div>
   <p class="fuente"><a href="https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2025/ce/CE2024_def_RR.pdf#page=7" target="_blank" rel="noopener noreferrer">INEGI · resultados definitivos, p. 7</a>. Sector privado y empresas paraestatales: 5,468,180 unidades. No equivale a todo el empleo del país.</p>
+  <aside class="notes">El dato es de la actividad de 2023, publicado en los Censos Económicos 2024. 95.4% cuenta unidades; 41.4% cuenta personal. El universo es privado y paraestatal, no todo el empleo nacional. Este es el centro del contexto mexicano, no una lámina sobre grandes tecnológicas.</aside>
 </section>
 <section class="s crema" data-lienzo="crema">
   <h2>Antes de la IA,<br>está la brecha digital.</h2>
@@ -97,6 +192,7 @@
   <div class="barras"><div><div class="barra-etq"><span>2013</span><b>18.9%</b></div><div class="pista"><i style="--w:18.9%"></i></div></div><div><div class="barra-etq"><span>2018</span><b>20.7%</b></div><div class="pista"><i style="--w:20.7%"></i></div></div><div><div class="barra-etq"><span>2023</span><b>26.4%</b></div><div class="pista"><i style="--w:26.4%"></i></div></div></div>
   <p class="takeaway">No usar internet en el negocio no equivale a no tener señal o teléfono.</p>
   <p class="fuente"><a href="https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2025/ce/CE2024_def_RR.pdf#page=16" target="_blank" rel="noopener noreferrer">INEGI · CE 2024, p. 16</a>. Universo censal privado y paraestatal. Uso para actividades del negocio, no disponibilidad de conexión. Escala: 0–100%.</p>
+  <aside class="notes">Revelar cada año. Aclarar de inmediato que se mide uso de internet para actividades del negocio, no cobertura de red ni posesión de teléfono. La brecha digital no se resuelve necesariamente comprando IA.</aside>
 </section>
 <section class="s crema" data-lienzo="crema">
   <h2>Vender por internet<br>también depende del tamaño.</h2>
@@ -104,12 +200,14 @@
   <div class="barras"><div><div class="barra-etq"><span>Micro · 0–10 personas</span><b>4.4%</b></div><div class="pista"><i style="--w:4.4%"></i></div></div><div><div class="barra-etq"><span>Pymes · 11–250 personas</span><b>28.7%</b></div><div class="pista"><i style="--w:28.7%"></i></div></div><div><div class="barra-etq"><span>Grandes · más de 250</span><b>33.0%</b></div><div class="pista"><i style="--w:33%"></i></div></div></div>
   <p class="takeaway">Es porcentaje de negocios que venden en línea, no de sus ingresos.</p>
   <p class="fuente"><a href="https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2025/ce/CE2024_def_RR.pdf#page=18" target="_blank" rel="noopener noreferrer">INEGI · CE 2024, p. 18</a>. Sector privado y empresas paraestatales. Escala: 0–100%.</p>
+  <aside class="notes">Una barra por tamaño. Las pymes del censo se agrupan de 11 a 250 personas; no asumir la misma definición que OCDE. No son cuotas del comercio electrónico ni porcentajes de ventas monetarias.</aside>
 </section>
 <section class="s verde" data-lienzo="verde">
   <h2>El denominador<br>cambia la historia.</h2>
   <p class="lead">“¿Qué porcentaje usa IA?”<br>Primero: ¿porcentaje de quiénes?</p>
   <ul class="lista"><li>¿De todos los negocios o solo de quienes usan herramientas digitales?</li><li>¿Incluye microempresas o solo empresas de cierto tamaño?</li><li>¿Mide uso personal, una prueba o integración en la operación?</li></ul>
   <p class="takeaway">No pongamos el censo mexicano de 2023 y la OCDE de 2025 en una carrera sin revisar cobertura y método.</p>
+  <aside class="notes">Invitar a detectar un porcentaje sin denominador en noticias. Una diferencia entre países puede ser, en parte, una diferencia en lo que se contó. Por eso esta presentación no inventa una carrera México contra OCDE.</aside>
 </section>
 <section class="s crema" data-lienzo="crema">
   <h2>Hay mejoras medidas.<br>No son universales.</h2>
@@ -117,12 +215,14 @@
   <table><caption>Estudio con 5,179 agentes de soporte</caption><thead><tr><th>Grupo</th><th>Cambio en asuntos resueltos por hora</th></tr></thead><tbody><tr><td>Promedio del estudio</td><td>+14%</td></tr><tr><td>Personal novato y de menor habilidad</td><td>+34%</td></tr><tr><td>Personal más experimentado y hábil</td><td>Impacto mínimo</td></tr></tbody></table>
   <p class="takeaway">Un resultado en soporte no es una promesa de ahorro para cualquier empresa.</p>
   <p class="fuente"><a href="https://www.nber.org/papers/w31161" target="_blank" rel="noopener noreferrer">Brynjolfsson, Li y Raymond · NBER WP 31161</a>, revisión nov 2023. Cifras de esa versión, no de la publicación final de 2025. No mide utilidades.</p>
+  <aside class="notes">Un clic por grupo. 14% es el promedio observado en una tarea y organización específicas. 34% corresponde a personal novato y de menor habilidad. No sumarlos ni extrapolarlos a ganancias. Es la versión del working paper revisada en noviembre de 2023.</aside>
 </section>
 <section class="s amarillo" data-lienzo="crema">
   <h2>Sentirse más rápido<br>no basta para demostrarlo.</h2>
   <div class="contraste"><div><h3>La advertencia de 2025</h3><p>En un experimento de METR, 16 desarrolladores tardaron 19% más con IA en 246 tareas de sus propios proyectos.</p></div><div><h3>La actualización de 2026</h3><p>METR advierte que ese resultado histórico ya no representa las herramientas actuales. El nuevo estudio tiene sesgos de selección y no permite estimar bien el efecto.</p></div></div>
   <p class="takeaway">La lección no es “la IA no sirve”. Es medir, actualizar la evidencia y reconocer lo que no sabemos.</p>
   <p class="fuente"><a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/" target="_blank" rel="noopener noreferrer">METR · 10 jul 2025</a> y <a href="https://metr.org/blog/2026-02-24-uplift-update/" target="_blank" rel="noopener noreferrer">actualización de 24 feb 2026</a>. Contexto específico de desarrollo de software; no promedio empresarial.</p>
+  <aside class="notes">Contar primero el experimento y revelar después la actualización. No dejar al público con la conclusión de que las herramientas actuales necesariamente retrasan a todos. El cambio de evidencia y los problemas de selección son parte de la divulgación, no una debilidad que haya que ocultar.</aside>
 </section>
 <section class="s crema" data-lienzo="crema">
   <h2>Una tarea puede cambiar<br>sin que desaparezca el oficio.</h2>
@@ -139,6 +239,25 @@
   <ul class="lista"><li><strong>Preparación:</strong> ordenar datos, permisos y procesos.</li><li><strong>Operación:</strong> herramienta, integración y capacitación.</li><li><strong>Revisión:</strong> comprobar resultados y corregir errores.</li><li><strong>Dependencia:</strong> cambios de proveedor, precios y disponibilidad.</li></ul>
   <p class="takeaway">Importa el costo por tarea correctamente terminada, no solo lo rápido que aparece una respuesta.</p>
 </section>
+<section class="s crema" data-lienzo="crema" id="medir">
+  <h2>La cuenta completa<br>de una tarea.</h2>
+  <ol class="steps"><li class="fragment"><strong>Preparar</strong><span>Dar contexto, conseguir datos autorizados y definir qué cuenta como correcto.</span></li><li class="fragment"><strong>Ejecutar</strong><span>Incluir intentos fallidos, herramientas y tiempo de espera.</span></li><li class="fragment"><strong>Revisar</strong><span>Contar correcciones y errores que aparecen después.</span></li><li class="fragment"><strong>Aceptar</strong><span>Dividir el costo total entre las tareas aceptadas, no entre todos los intentos.</span></li></ol>
+  <p class="fuente">Criterio de evaluación propuesto en la conferencia UTM. Si ninguna tarea se acepta, no inventar un costo unitario.</p>
+  <aside class="notes">Una respuesta inmediata puede costar mucho tiempo de revisión. Medir de inicio a aceptación, no solo generación. Comparar tareas de dificultad semejante con y sin IA. Separar dinero gastado de horas humanas, y mostrar la muestra y su variabilidad.</aside>
+</section>
+<section class="s profundo" data-lienzo="profundo" id="contraargumentos">
+  <h2>Contraargumentos.<br>Los que pueden cambiar la conclusión.</h2>
+  <ol class="historia"><li class="fragment">Las tareas reales son más desordenadas que las evaluaciones.</li><li class="fragment">Adoptar una herramienta no demuestra un beneficio económico.</li><li class="fragment">Datos, capacitación e integración pueden convertirse en el cuello de botella.</li><li class="fragment">Infraestructura, dependencia y poder de mercado también importan.</li></ol>
+  <p class="takeaway fragment">No son un pie de página: pueden volver inviable una aplicación.</p>
+  <aside class="notes">Cambiar de tono y dar espacio a la objeción. Como en la UTM, estos argumentos deben poder debilitar la hipótesis. Pedir un ejemplo donde revisar sea más costoso que hacer la tarea directamente.</aside>
+</section>
+<section class="s crema" data-lienzo="crema" id="infraestructura">
+  <h2>La nube<br>también ocupa un lugar.</h2>
+  <div class="fila"><div class="fragment"><img class="pieza" src="marca/elementos/infraestructura.svg" alt=""><h3>Electricidad y chips</h3><p>El servicio depende de infraestructura física y capacidad disponible.</p></div><div class="fragment"><img class="pieza" src="marca/brand/jarron-humo.svg" alt=""><h3>Enfriamiento</h3><p>El impacto del agua y la energía depende del diseño, el clima y la ubicación.</p></div><div class="fragment"><img class="pieza" src="marca/elementos/red.svg" alt=""><h3>Dependencia</h3><p>Acceso, costos y condiciones pueden cambiar por decisiones de proveedores y gobiernos.</p></div></div>
+  <p class="takeaway fragment">No hay una cifra universal de consumo por pregunta que describa todos los sistemas.</p>
+  <p class="fuente">Contexto: <a href="https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai" target="_blank" rel="noopener noreferrer">IEA · Energy and AI (2025)</a>. Sin extrapolar consumo total de centros de datos a cada consulta.</p>
+  <aside class="notes">Recupera límites físicos y geopolíticos de la UTM sin trasladar comparaciones de golf, agua o proyecciones entre años y universos distintos. Para un negocio, discutir continuidad operativa, salida de proveedor y tratamiento de los datos. No minimizar impactos locales porque otra actividad consuma más.</aside>
+</section>
 <section class="s crema" data-lienzo="crema">
   <h2>Los límites también<br>son parte de la explicación.</h2>
   <dl class="riesgos"><div><dt>Información falsa</dt><dd>Revisar cifras, citas y condiciones contra documentos originales.</dd></div><div><dt>Datos personales</dt><dd>No subir expedientes, identificaciones o datos de clientes sin autorización y protección adecuadas.</dd></div><div><dt>Acciones con consecuencias</dt><dd>Exigir aprobación para pagos, envíos, descuentos o borrado de registros.</dd></div><div><dt>Pérdida de criterio</dt><dd>Poder explicar por qué se acepta una respuesta; no confiar solo en cómo suena.</dd></div></dl>
@@ -147,6 +266,12 @@
   <h2>Cómo aprender<br>sin comprar la promesa.</h2>
   <ol class="steps"><li><strong>Elegir una tarea</strong><span>Pequeña, repetible y con un resultado que se pueda revisar.</span></li><li><strong>Comparar</strong><span>Casos equivalentes con y sin IA; contar tiempo total, errores y correcciones.</span></li><li><strong>Decidir con evidencia</strong><span>Continuar, cambiar el método o dejar de usarla si no ayuda.</span></li></ol>
   <p class="takeaway">Una prueba pequeña orienta; no demuestra por sí sola un retorno para toda la empresa.</p>
+</section>
+<section class="s verde" data-lienzo="verde" id="aprender">
+  <h2>Aprender con IA<br>no es pedir la respuesta y copiarla.</h2>
+  <ol class="steps"><li class="fragment"><strong>Antes</strong><span>Intentar resolver el problema y explicar qué falta entender.</span></li><li class="fragment"><strong>Durante</strong><span>Pedir pistas, ejemplos y un argumento en contra de la primera respuesta.</span></li><li class="fragment"><strong>Después</strong><span>Resolver un caso nuevo sin asistencia y explicar el procedimiento.</span></li></ol>
+  <p class="takeaway fragment">Optimizar el trabajo y mejorar la forma de aprender son responsabilidades distintas.</p>
+  <aside class="notes">Reafirma el cierre para estudiantes y trabajadores de la UTM. El método propuesto no es un resultado experimental de esta charla. Una respuesta correcta que no puedes explicar no demuestra que aprendiste.</aside>
 </section>
 <section class="s profundo" data-lienzo="profundo">
   <h2>Que nos ayude a pensar.<br>No a dejar de pensar.</h2>
@@ -159,22 +284,21 @@
   <ul class="fuentes-lista"><li><a href="https://metr.org/time-horizons/" target="_blank" rel="noopener noreferrer">METR · capacidades y límites de los agentes</a><span>TH 1.1; corte de septiembre de 2026.</span></li><li><a href="https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2025/ce/CE2024_def_RR.pdf" target="_blank" rel="noopener noreferrer">INEGI · Censos Económicos 2024</a><span>Resultados definitivos; actividad económica de 2023.</span></li><li><a href="https://www.oecd.org/en/about/news/announcements/2026/01/ai-use-by-individuals-surges-across-the-oecd-as-adoption-by-firms-continues-to-expand.html" target="_blank" rel="noopener noreferrer">OCDE · adopción de IA en empresas</a><span>Datos 2023–2025; comunicado de enero de 2026.</span></li><li><a href="https://www.worldbank.org/ext/en/topic/competitiveness/small-and-medium-enterprises-smes-finance" target="_blank" rel="noopener noreferrer">Banco Mundial · pequeñas y medianas empresas</a><span>Contexto mundial; definiciones variables entre países.</span></li><li><a href="https://www.nber.org/papers/w31161" target="_blank" rel="noopener noreferrer">NBER · Generative AI at Work</a><span>WP 31161, revisión de noviembre de 2023.</span></li></ul>
   <p class="fuente">Referencias, denominadores y límites completos en <a href="fuentes.md" target="_blank" rel="noopener noreferrer">fuentes.md</a>. La charla adapta la conferencia UTM, no sus cifras sin verificación.</p>
 </section>
-<section class="s verde" data-lienzo="verde">
+<section class="s verde" data-lienzo="verde" id="preguntas">
   <h2>¿Qué cambia<br>en su oficio?</h2>
   <p class="lead">¿Qué tarea probarían?<br>¿Qué error no aceptarían?<br>¿Qué evidencia les haría cambiar de opinión?</p>
   <p class="sub">Preguntas y conversación, a mano alzada.</p>
   <div class="banda" aria-hidden="true"><img src="marca/elementos/tiendas.svg" alt=""><img src="marca/brand/telar.svg" alt=""><img src="marca/brand/jarron-humo.svg" alt=""><img src="marca/brand/red-tejida.svg" alt=""></div>
 </section>
-<section class="s crema" data-lienzo="crema">
-  <span class="marca isotipo" aria-hidden="true"></span>
-  <h1>Gracias.</h1>
-  <p class="sub">Hendrik Martina · Jesús Lerma</p>
-  <p class="lead">Entender el cambio.<br>Conservar el criterio.</p>
-  <span class="marca logo-h" role="img" aria-label="Artesanos Digitales"></span>
+<section class="s crema" data-lienzo="crema" data-escena="cierre" id="gracias">
+  <div class="escena-layout"><div><span class="marca isotipo" aria-hidden="true"></span><h1>Gracias.</h1><p class="sub">Hendrik Martina · Jesús Lerma</p><p class="lead fragment" data-estado="1">Entender el cambio.<br>Conservar el criterio.</p><span class="marca logo-h" role="img" aria-label="Artesanos Digitales"></span></div><div class="escena-panel" data-scene-host><canvas class="escena-lienzo" aria-label="Una red de conocimiento se reconstruye"></canvas><p class="escena-respaldo">Compartir conocimiento y verificar juntos. Artesanos Digitales.</p></div></div>
+  <aside class="notes">Última diapositiva. Agradecer sin cerrar con una oferta comercial. El público debe llevarse una pregunta comprobable, no una promesa de transformación automática.</aside>
 </section>
 </main>
 <p class="nav" aria-live="polite"></p>
+<script src="vendor/three.min.js"></script>
 <script src="js/logo.js"></script>
+<script src="js/escenas.js"></script>
 <script src="js/deck.js"></script>
 </body>
 </html>
